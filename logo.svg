@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+<title id="title">Everhaven Senior Living logo</title><desc id="desc">An elegant evergreen and home emblem in forest green and gold.</desc>
+<rect x="5" y="5" width="230" height="230" rx="115" fill="#173c32"/>
+<circle cx="120" cy="120" r="101" fill="none" stroke="#c6a365" stroke-width="2"/>
+<path d="M65 113 120 69l55 44" fill="none" stroke="#f7f3e9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 108v54h84v-54" fill="none" stroke="#f7f3e9" stroke-width="4" stroke-linejoin="round"/>
+<path d="M120 88v68" fill="none" stroke="#c6a365" stroke-width="3"/>
+<path d="M120 101c-16-2-24-12-24-24 16 0 24 10 24 24Zm0 16c16-2 24-12 24-24-16 0-24 10-24 24Zm0 14c-14-1-21-9-21-19 14 0 21 8 21 19Zm0 0c14-1 21-9 21-19-14 0-21 8-21 19Z" fill="#c6a365"/>
+<path d="M99 174h42" stroke="#c6a365" stroke-width="3" stroke-linecap="round"/>
+<text x="120" y="199" text-anchor="middle" font-family="Georgia,serif" font-size="13" letter-spacing="3" fill="#f7f3e9">EVERHAVEN</text>
+</svg>
