@@ -22,7 +22,7 @@ document.getElementById('loginForm').addEventListener('submit',async e=>{
  e.preventDefault();const b=document.getElementById('loginButton');b.disabled=true;loginMessage.textContent='Signing in…';
  const {error}=await supabase.auth.signInWithPassword({email:document.getElementById('email').value.trim(),password:document.getElementById('password').value});
  b.disabled=false;
- if(error){loginMessage.textContent='Sign-in failed. Check your email/password and confirm your Supabase account is active.';return}
+ if(error){loginMessage.textContent='Sign-in error: '+error.message;return}
  await showSession();
 });
 logout.addEventListener('click',async()=>{await supabase.auth.signOut();location.reload()});
