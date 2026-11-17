@@ -128,3 +128,67 @@ textarea{resize:vertical}
 @media(max-width:900px){.site-header{padding:0 5%}nav{gap:15px;font-size:10px}.hero{margin:0;min-height:620px}.hero-badge{right:5%;bottom:80px;width:94px;height:94px}.section{padding:82px 7%}.lifestyle-panel{padding:60px 8%}.photo-card{min-height:310px}.contact-card{gap:5%}}
 @media(max-width:700px){.announcement{font-size:7px;letter-spacing:1px}.site-header{height:76px;padding:0 5%}.brand-logo{width:46px;height:46px}.brand-name{font-size:11px;letter-spacing:2px}.brand-name small{font-size:8px;letter-spacing:2.5px}.menu-toggle{display:block}nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:22px 6%;flex-direction:column;align-items:stretch;gap:18px;border-bottom:1px solid var(--line)}nav.open{display:flex}.nav-cta{text-align:center}.hero{min-height:620px}.hero-content{padding:60px 7% 95px}.hero-shade{background:linear-gradient(90deg,rgba(12,34,49,.94),rgba(12,34,49,.68)),linear-gradient(0deg,rgba(10,28,40,.52),transparent)}.hero-badge{display:none}.hero-caption{left:7%;right:7%;font-size:7px}.hero-caption span:last-child{max-width:190px;text-align:right}.intro-grid,.contact-card{grid-template-columns:1fr;gap:24px}.values-row{gap:14px;margin-top:40px}.values-row b{font-size:18px}.values-row p{font-size:10px}.lifestyle{grid-template-columns:1fr}.lifestyle-photo{min-height:310px}.lifestyle-panel{padding:55px 7%}.gallery-heading,.options-head{display:block}.gallery-heading>p,.options-head>p{margin-top:18px}.photo-grid{grid-template-columns:1fr}.photo-card{min-height:330px}.option-cards{grid-template-columns:1fr}.option-cards article{min-height:auto}.contact-card>div{padding:30px 25px}.contact form{padding:22px}.site-footer{grid-template-columns:1fr;padding:28px 6%}.site-footer>p{text-align:left;margin:8px 0}.back-top{justify-self:start}.copyright{grid-column:1/-1}}
 @media(max-width:380px){.hero h1{font-size:52px}.hero-actions{gap:18px}.text-link{width:100%}.values-row{grid-template-columns:1fr}.values-row>div{display:grid;grid-template-columns:30px 1fr;align-items:center}.values-row .value-icon{grid-row:span 2;margin:0}.values-row p{grid-column:2}}
+
+
+/* Everhaven modern refresh: evergreen, warm ivory, and champagne */
+:root{
+  --navy:#21483f;
+  --navy-deep:#142f2a;
+  --blue:#6f9185;
+  --copper:#c49a65;
+  --sand:#e8e2d5;
+  --cream:#f4f5ef;
+  --paper:#fffefa;
+  --ink:#263832;
+  --muted:#68766f;
+  --line:#dce3dc;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif
+}
+body{background:var(--cream);color:var(--ink)}
+.announcement{background:#142f2a;color:#e8eee9}
+.site-header{background:rgba(255,254,250,.96);backdrop-filter:blur(14px);box-shadow:0 8px 30px #142f2a0d;border-bottom-color:#dce3dc}
+.brand-name{color:#21483f}
+.brand-name small{color:#789487}
+nav a:hover{color:#a77b47}
+.nav-cta{border-color:#c9b18e;border-radius:3px}
+.hero{border-radius:0 0 28px 28px;background:#21483f;box-shadow:0 22px 60px #142f2a1a}
+.hero-shade{background:linear-gradient(90deg,rgba(13,39,33,.93),rgba(13,39,33,.69) 43%,rgba(13,39,33,.16)),linear-gradient(0deg,rgba(10,31,26,.43),transparent 50%)}
+.eyebrow{color:#e9d7bb}
+em{color:#d8b887}
+.button{border-radius:4px;transition:transform .2s,background .2s,box-shadow .2s}
+.button:hover{transform:translateY(-2px);box-shadow:0 8px 20px #142f2a24}
+.button-gold{background:#b88d58}
+.button-gold:hover{background:#a77b47}
+.section-label{color:#a77b47}
+.large-copy{color:#21483f}
+.values-row{border-color:#dce3dc}
+.value-icon{color:#b88d58}
+.values-row b{color:#21483f}
+.lifestyle{background:#142f2a}
+.section-label.light{color:#e3c99f}
+.feature-list span{color:#d8b887}
+.gallery{background:#e9eee8}
+.photo-card{border-radius:7px;box-shadow:0 14px 36px #142f2a14}
+.photo-card:after{background:linear-gradient(0deg,rgba(13,39,33,.86),transparent 68%)}
+.photo-card>div span{color:#e7c99d}
+.option-cards article{border:1px solid #dce3dc;border-top:3px solid #b88d58;border-radius:7px;background:#fffefa;box-shadow:0 8px 24px #142f2a08}
+.option-cards article:hover{box-shadow:0 16px 34px #142f2a14}
+.option-icon{color:#6f9185}
+.option-cards h3{color:#21483f}
+.care-note{background:#edf1eb;border-left-color:#b88d58;border-radius:0 5px 5px 0}
+.quote-band{background:linear-gradient(135deg,#21483f,#142f2a)}
+.quote-mark{color:#d8b887}
+.quote-band>p{color:#e3c99f}
+.contact{background:#e9eee8}
+.contact-card>div{background:linear-gradient(145deg,#28584c,#142f2a);border-radius:7px 0 0 7px}
+.contact form{background:#fffefa;border:1px solid #dce3dc;border-radius:0 7px 7px 0;box-shadow:0 12px 34px #142f2a0b}
+input,select,textarea{border-radius:4px;background:#fbfcf8;border-color:#d7e0d8}
+input:focus,select:focus,textarea:focus{outline:2px solid #b88d58;outline-offset:1px}
+.form-message-visible{border-radius:0 4px 4px 0}
+.site-footer{background:#142f2a;border-top:3px solid #b88d58}
+@media(max-width:700px){
+ .hero{border-radius:0 0 18px 18px}
+ .contact-card>div{border-radius:7px 7px 0 0}
+ .contact form{border-radius:0 0 7px 7px}
+}
