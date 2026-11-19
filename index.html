@@ -175,6 +175,37 @@
   <p class="giving-note">This is part of Everhaven’s proposed community philosophy. Any future giving assistance or program will be voluntary, transparent, and subject to appropriate procedures. Donations are not currently collected by Everhaven.</p>
 </section>
 <section class="quote-band"><span class="quote-mark">“</span><blockquote>The best chapters are the ones where you feel at home.</blockquote><p>THE EVERHAVEN PROMISE</p></section>
+<section class="portal-section section" id="family-portal">
+  <div class="section-label"><span>14</span> THE EVERHAVEN FAMILY PORTAL</div>
+  <div class="portal-intro"><h2>A more personal<br><em>way to stay connected.</em></h2><p>Create a private account to send a message to the Everhaven project team and view replies. This early-stage portal is for project communication only—not care coordination, medical records, or emergency support.</p></div>
+  <div class="portal-card">
+    <div class="portal-auth" id="portalAuth">
+      <div class="portal-kicker">YOUR PRIVATE ACCOUNT</div>
+      <div class="portal-tabs"><button type="button" class="portal-tab active" id="portalLoginTab">Sign in</button><button type="button" class="portal-tab" id="portalSignupTab">Create account</button></div>
+      <form id="portalAuthForm">
+        <label for="portalName" id="portalNameLabel" hidden>Your name</label><input id="portalName" maxlength="120" autocomplete="name" placeholder="Your name" hidden>
+        <label for="portalType" id="portalTypeLabel" hidden>Account type</label><select id="portalType" hidden><option value="family">Family member</option><option value="resident">Future resident</option></select>
+        <label for="portalEmail">Email address</label><input id="portalEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="portalPassword">Password</label><input id="portalPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters">
+        <button class="button button-gold submit-button" type="submit" id="portalAuthButton">Sign in securely ↗</button>
+        <button type="button" class="portal-text-button" id="portalForgot">Forgot password?</button>
+      </form>
+      <p class="portal-status" id="portalAuthStatus" aria-live="polite">Use your email to create an account or sign in.</p>
+    </div>
+    <div id="portalWorkspace" hidden>
+      <div class="portal-workspace-head"><div><div class="portal-kicker">SIGNED-IN ACCOUNT</div><h3 id="portalWelcome">Welcome</h3><p id="portalAccountEmail"></p></div><button type="button" id="portalSignOut" class="portal-text-button">Sign out</button></div>
+      <form id="portalMessageForm" class="portal-message-form">
+        <div class="portal-kicker">PRIVATE MESSAGE TO EVERHAVEN</div>
+        <label for="portalSubject">Subject</label><input id="portalSubject" maxlength="160" required placeholder="What would you like to discuss?">
+        <label for="portalBody">Your message</label><textarea id="portalBody" rows="4" maxlength="5000" required placeholder="Write your question or message..."></textarea>
+        <button class="button button-gold submit-button" type="submit">Send private message ↗</button>
+      </form>
+      <div class="portal-inbox"><div class="portal-kicker">YOUR CONVERSATION</div><div id="portalMessages" aria-live="polite">Sign in to view messages.</div></div>
+      <p class="portal-status" id="portalWorkspaceStatus" aria-live="polite">Messages are visible only to the account holder and the intended Everhaven recipient.</p>
+    </div>
+  </div>
+  <p class="portal-disclaimer">Account creation may require email confirmation. Please do not submit health information, financial details, passwords, or urgent requests. The portal is an early planning-stage communication feature and is not monitored as an operating senior-care service.</p>
+</section>
 <section class="contact section" id="contact"><div class="contact-card"><div><div class="section-label light"><span>13</span> A COMMUNITY CONVERSATION</div><h2>Your voice<br><em>matters here.</em></h2><p>Whether you are an older adult, family member, caregiver, neighbor, or someone interested in our community vision, we would love to hear from you. Everhaven is currently in the planning stage and is not accepting residents.</p><p class="contact-note">We are preparing the next steps for Everhaven Senior Living in Florida. Specific location, opening date, pricing, and availability are not yet confirmed.</p></div><form id="contactForm"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><label for="interest">I’m interested in</label><select id="interest" name="interest"><option value="future_community_interest">Future community updates</option><option value="family_information">Information for myself or a family member</option><option value="community_feedback">Share an idea or suggestion</option><option value="careers_interest">Future employment interest</option><option value="general">General question or other inquiry</option></select><label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="Best contact number"><label for="message">What would you like us to know? <span>(optional)</span></label><textarea id="message" name="message" rows="3" placeholder="Share a question, idea, or what you hope to see at Everhaven..."></textarea><button class="button button-gold submit-button" type="submit">Send my message <span>↗</span></button><p id="formMessage" class="form-message" aria-live="polite">Your inquiry is securely recorded for review. Do not include medical details, Social Security numbers, or financial account information.</p></form></div></section>
 </main>
 <div class="site-disclaimer"><strong>Important development notice:</strong> Everhaven Senior Living is a proposed community in the planning and development stage. No facility is currently represented as open. Location, licensing, care services, pricing, amenities, and opening dates are not yet confirmed. Website photos and room-tour imagery are illustrative and do not depict an existing Everhaven property.</div>\n<footer class="site-footer"><a class="brand footer-brand" href="#home"><img class="brand-logo" src="logo.svg" alt="Everhaven Senior Living logo"><span class="brand-name">EVERHAVEN<small>SENIOR LIVING</small></span></a><p>Where Comfort, Care, and Community Come Home.</p><a href="#home" class="back-top">BACK TO TOP ↑</a><small class="copyright">© <span id="year"></span> Everhaven Senior Living. All rights reserved.</small></footer>
