@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090909">
-<meta name="description" content="Explore the Everhaven Senior Living vision: welcoming spaces, family connection, activities, and a community shaped around older adults and the people who care about them.">
+<meta name="description" content="Discover the Everhaven Senior Living vision in Central Florida. Explore our resident-first philosophy, conceptual spaces, family connection, community survey, and development updates.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Everhaven Senior Living | A Life Well Lived">
+<meta property="og:title" content="Everhaven Senior Living | A Life Well Lived">\n<meta property="og:site_name" content="Everhaven Senior Living">
 <meta property="og:description" content="A welcoming senior living vision shaped around residents, families, and the wider community.">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#101010">
@@ -22,6 +22,14 @@
   <button class="menu-toggle" id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
   <nav id="nav"><a href="#philosophy">Our Philosophy</a><a href="#lifestyle">Lifestyle</a><a href="#development">Our Journey</a><a href="#expectations">Your Expectations</a><a href="#giving">Giving Back</a><a href="#community">Community</a><a href="#contact" class="nav-cta">Share Your Thoughts <span>↗</span></a></nav>
 </header>
+<div class="accessibility-bar" role="region" aria-label="Accessibility display controls">
+  <span>MAKE THIS PAGE COMFORTABLE TO READ</span>
+  <button type="button" id="textSmaller" aria-label="Decrease text size">A−</button>
+  <button type="button" id="textLarger" aria-label="Increase text size">A+</button>
+  <button type="button" id="contrastToggle" aria-pressed="false">High contrast</button>
+  <button type="button" id="motionToggle" aria-pressed="false">Reduce motion</button>
+</div>
+
 <main id="main-content">
 <section class="hero" id="home">
   <div class="hero-image" role="img" aria-label="A multigenerational family sharing a warm visit in a senior living community"></div><div class="hero-shade"></div>
@@ -39,6 +47,18 @@
 </section>
 <section class="intro section" id="philosophy"><div class="section-label"><span>01</span> OUR COMMITMENT</div><div class="intro-grid"><h2>Designed for comfort.<br>Guided by <em>purpose.</em></h2><div class="intro-copy"><p class="large-copy">Senior living should support choice, connection, and confidence.</p><p>Everhaven Senior Living is a Florida-based development concept focused on creating a welcoming senior-living environment where residents are treated with dignity and families are included with care. Our approach prioritizes thoughtful design, meaningful daily experiences, and clear communication with families.</p><a class="underlink" href="#lifestyle">Learn About Our Approach <span>↗</span></a></div></div>
 <div class="values-row"><div><span class="value-icon">✳</span><b>Personal dignity</b><p>Every person has a story worth honoring.</p></div><div><span class="value-icon">⌂</span><b>Comfort that feels like home</b><p>Welcoming spaces designed for ease and belonging.</p></div><div><span class="value-icon">♡</span><b>Family at the heart</b><p>Connection, trust, and peace of mind matter.</p></div></div></section>
+
+<section class="principles-band section" id="everhaven-principles">
+  <div class="section-label"><span>OUR STANDARD</span> THE EXPERIENCE WE WANT TO CREATE</div>
+  <div class="principles-heading"><h2>Luxury is how<br><em>people are treated.</em></h2><p>Beautiful spaces matter. So do the everyday details: being listened to, having choices respected, feeling included, and knowing where to turn with a question.</p></div>
+  <div class="principles-grid">
+    <article><span>01</span><h3>Be heard</h3><p>Make room for residents and families to ask questions, offer ideas, and be part of conversations.</p></article>
+    <article><span>02</span><h3>Keep choice personal</h3><p>Respect individual routines, interests, preferences, and the freedom to make personal decisions.</p></article>
+    <article><span>03</span><h3>Communicate clearly</h3><p>Share information honestly, explain what is known, and be transparent when plans are still evolving.</p></article>
+    <article><span>04</span><h3>Welcome every generation</h3><p>Value family relationships, friendships, community connections, and the stories each person brings.</p></article>
+  </div>
+  <p class="principles-note">These are guiding principles for the proposed community, not a representation of currently operating services or established performance standards.</p>
+</section>
 <section class="lifestyle" id="lifestyle"><div class="lifestyle-photo"></div><div class="lifestyle-panel"><div class="section-label light"><span>02</span> LIFE AT EVERHAVEN</div><h2>Everyday moments.<br><em>Made memorable.</em></h2><p>Imagine bright gathering spaces, inviting outdoor gardens, shared meals, new friendships, and room to enjoy the things that make life personal.</p><div class="feature-list"><div><span>01</span> Thoughtful spaces to gather</div><div><span>02</span> Wellness and purposeful activities</div><div><span>03</span> Welcoming spaces for family visits</div><div><span>04</span> A community built around connection</div></div><p class="disclaimer">Amenities and services will be confirmed as the community is developed.</p></div></section>
 
 <section class="family-section section" id="family">
@@ -157,6 +177,6 @@
 <section class="quote-band"><span class="quote-mark">“</span><blockquote>The best chapters are the ones where you feel at home.</blockquote><p>THE EVERHAVEN PROMISE</p></section>
 <section class="contact section" id="contact"><div class="contact-card"><div><div class="section-label light"><span>13</span> A COMMUNITY CONVERSATION</div><h2>Your voice<br><em>matters here.</em></h2><p>Whether you are an older adult, family member, caregiver, neighbor, or someone interested in our community vision, we would love to hear from you. Everhaven is currently in the planning stage and is not accepting residents.</p><p class="contact-note">We are preparing the next steps for Everhaven Senior Living in Florida. Specific location, opening date, pricing, and availability are not yet confirmed.</p></div><form id="contactForm"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><label for="interest">I’m interested in</label><select id="interest" name="interest"><option value="future_community_interest">Future community updates</option><option value="family_information">Information for myself or a family member</option><option value="community_feedback">Share an idea or suggestion</option><option value="careers_interest">Future employment interest</option><option value="general">General question or other inquiry</option></select><label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="Best contact number"><label for="message">What would you like us to know? <span>(optional)</span></label><textarea id="message" name="message" rows="3" placeholder="Share a question, idea, or what you hope to see at Everhaven..."></textarea><button class="button button-gold submit-button" type="submit">Send my message <span>↗</span></button><p id="formMessage" class="form-message" aria-live="polite">Your inquiry is securely recorded for review. Do not include medical details, Social Security numbers, or financial account information.</p></form></div></section>
 </main>
-<footer class="site-footer"><a class="brand footer-brand" href="#home"><img class="brand-logo" src="logo.svg" alt="Everhaven Senior Living logo"><span class="brand-name">EVERHAVEN<small>SENIOR LIVING</small></span></a><p>Where Comfort, Care, and Community Come Home.</p><a href="#home" class="back-top">BACK TO TOP ↑</a><small class="copyright">© <span id="year"></span> Everhaven Senior Living. All rights reserved.</small></footer>
+<div class="site-disclaimer"><strong>Important development notice:</strong> Everhaven Senior Living is a proposed community in the planning and development stage. No facility is currently represented as open. Location, licensing, care services, pricing, amenities, and opening dates are not yet confirmed. Website photos and room-tour imagery are illustrative and do not depict an existing Everhaven property.</div>\n<footer class="site-footer"><a class="brand footer-brand" href="#home"><img class="brand-logo" src="logo.svg" alt="Everhaven Senior Living logo"><span class="brand-name">EVERHAVEN<small>SENIOR LIVING</small></span></a><p>Where Comfort, Care, and Community Come Home.</p><a href="#home" class="back-top">BACK TO TOP ↑</a><small class="copyright">© <span id="year"></span> Everhaven Senior Living. All rights reserved.</small></footer>
 <script src="script.js"></script>
 </body></html>
