@@ -136,3 +136,40 @@ if(communityForm){
     }finally{button.disabled=false;button.innerHTML=original;}
   });
 }
+
+const expectationsForm=document.getElementById('expectationsForm');
+if(expectationsForm){
+  expectationsForm.addEventListener('submit',async event=>{
+    event.preventDefault();
+    if(!expectationsForm.reportValidity())return;
+    const groups=['priority','amenities','activities','communication','atmosphere'];
+    const answers={};
+    groups.forEach(group=>{
+      answers[group]=Array.from(expectationsForm.querySelectorAll('input[name="'+group+'"]:checked')).map(input=>input.value);
+    });
+    answers.most_important_promise=expectationsForm.querySelector('input[name="promise"]:checked')?.value||'Not selected';
+    if(!groups.some(group=>answers[group].length)||answers.most_important_promise==='Not selected'){
+      document.getElementById('expectationsStatus').textContent='Please select at least one answer in the survey before submitting.';
+      return;
+    }
+    const button=expectationsForm.querySelector('button[type="submit"]');
+    const status=document.getElementById('expectationsStatus');
+    const original=button.innerHTML;
+    const get=id=>(document.getElementById(id)?.value||'').trim();
+    const summary='Everhaven expectations survey\\n'+JSON.stringify(answers,null,2)+'\\nAdditional thought: '+(get('expectationOther')||'None');
+    button.disabled=true;button.textContent='Submitting…';status.textContent='Submitting your answers securely. Please wait.';
+    try{
+      const response=await fetch('https://rpzmjiiomgjttjjrkkqf.supabase.co/rest/v1/everhaven_inquiries',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','apikey':'sb_publishable_Lwcv2EAfLV4gAn51_JtlVA_iEEimZIi','Authorization':'Bearer sb_publishable_Lwcv2EAfLV4gAn51_JtlVA_iEEimZIi','Prefer':'return=minimal'},
+        body:JSON.stringify({inquiry_type:'general',full_name:get('expectationName')||'Anonymous survey participant',email:get('expectationEmail')||'no-reply@everhaven.invalid',phone:'',message:summary})
+      });
+      if(!response.ok)throw new Error(await response.text());
+      status.textContent='Thank you. Your answers have been submitted and will help inform Everhaven’s planning.';
+      expectationsForm.reset();
+    }catch(error){
+      console.error('Everhaven expectations survey failed:',error);
+      status.textContent='We could not submit your answers right now. Please try again later.';
+    }finally{button.disabled=false;button.innerHTML=original;}
+  });
+}
