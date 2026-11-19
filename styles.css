@@ -723,3 +723,151 @@ nav a{white-space:nowrap}
  .roadmap article:last-child{grid-column:auto}
  .hero .hero-caption span:last-child{display:none}
 }
+
+
+/* EVERHAVEN SIGNATURE RESORT EXPERIENCE — final visual system */
+:root{
+ --haven-ink:#10100e;--haven-ivory:#f6f1e7;--haven-paper:#fffdf8;
+ --haven-gold:#b99a62;--haven-gold-light:#dfc99d;--haven-stone:#817967;
+ --haven-serif:'Cormorant Garamond',Georgia,serif;
+}
+html{scroll-behavior:smooth;scroll-padding-top:105px}
+body{font-family:'DM Sans',sans-serif;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+.announcement{display:flex;align-items:center;justify-content:center;gap:13px;background:#090908;color:#d9d0bf;min-height:34px;font-size:8px;letter-spacing:2.6px}
+.site-header{position:sticky;top:0;z-index:50;height:84px;background:rgba(250,247,240,.96);border-bottom:1px solid rgba(185,154,98,.3);box-shadow:0 8px 28px rgba(25,20,12,.045);backdrop-filter:blur(18px)}
+.brand{gap:12px}
+.brand-name{font-family:var(--haven-serif);font-size:21px;letter-spacing:3px;font-weight:600}
+.brand-name small{font-family:'DM Sans',sans-serif;font-size:8px;letter-spacing:4px;margin-top:5px}
+nav a{font-size:10px;letter-spacing:.7px;transition:color .25s,background .25s,border-color .25s}
+nav .nav-cta{padding:13px 18px;letter-spacing:1px}
+.hero{min-height:690px;background:#f1ebdf}
+.hero-image{filter:saturate(.78) contrast(1.02)}
+.hero-content{padding-top:105px;padding-bottom:120px}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:2.8px}
+.hero .eyebrow span{display:inline-block;width:30px;height:1px;background:var(--haven-gold)}
+.hero h1{font-family:var(--haven-serif);font-weight:400;letter-spacing:-2.5px;line-height:.88}
+.hero h1 em{font-weight:400}
+.hero-copy{font-size:14px;line-height:2;max-width:455px}
+.hero-actions{gap:28px;margin-top:32px}
+.button{min-height:51px;padding:0 25px;letter-spacing:1.1px;font-size:10px;text-transform:uppercase}
+.button-gold{background:linear-gradient(120deg,#d8c49a,#b18c50);border:1px solid #b18c50;box-shadow:0 10px 28px #5c48251c}
+.button-gold:hover{background:#e7d7b5;box-shadow:0 14px 34px #5c48252c}
+.hero .hero-caption{font-size:8px;letter-spacing:1.8px}
+.hero-badge{width:124px;height:124px;border-radius:50%;box-shadow:0 12px 38px #0003;letter-spacing:1.8px}
+.section{padding-top:clamp(86px,9vw,142px);padding-bottom:clamp(86px,9vw,142px)}
+.section-label{display:flex;align-items:center;gap:13px;font-size:9px;letter-spacing:2.5px;font-weight:700}
+.section-label span{font-size:10px;letter-spacing:1px;border:1px solid #b99a62;border-radius:50%;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center}
+h2,.intro-grid h2,.family-heading h2,.activities-heading h2,.gallery-heading h2,.options-head h2,.expectations-heading h2,.community-heading h2{font-family:var(--haven-serif);font-weight:400;letter-spacing:-1px}
+h2 em{font-weight:400}
+.welcome-paths{padding-left:6.5%;padding-right:6.5%;box-shadow:0 16px 42px #2d24150b}
+.welcome-paths-heading span{letter-spacing:2.5px}
+.welcome-paths>a{padding-left:26px;padding-right:26px}
+.welcome-paths>a b{font-size:24px;font-weight:500}
+.welcome-paths>a small{font-size:10px;letter-spacing:.2px}
+.intro{background:linear-gradient(135deg,#fffdf8,#f8f4eb)}
+.intro-grid h2{font-size:clamp(52px,6vw,82px);line-height:.98}
+.large-copy{font-family:var(--haven-serif);font-size:29px;line-height:1.25}
+.intro-copy>p:not(.large-copy){font-size:13px;line-height:2.05}
+.values-row{margin-top:65px;padding-top:30px}
+.values-row b{font-family:var(--haven-serif);font-size:23px;font-weight:500}
+.values-row p{font-size:11px;line-height:1.8}
+.lifestyle{min-height:710px}
+.lifestyle-photo{filter:saturate(.78)}
+.lifestyle-panel{padding:clamp(55px,8vw,115px) 10%;background:linear-gradient(145deg,#191814,#090908)}
+.lifestyle-panel h2{font-size:clamp(48px,5.7vw,78px);line-height:.98}
+.lifestyle-panel>p{font-size:13px;line-height:2;color:#c8c0b2}
+.feature-list{margin-top:36px}
+.feature-list>div{padding:17px 0;border-bottom:1px solid #ffffff20;font-size:11px;letter-spacing:.4px}
+.feature-list>div span{color:var(--haven-gold-light);margin-right:16px}
+.family-heading h2,.activities-heading h2,.gallery-heading h2{font-size:clamp(49px,6vw,78px);line-height:.98}
+.family-heading>p,.activities-heading>p,.gallery-heading>p{font-size:13px;line-height:2;color:#6e675b}
+.family-grid{gap:17px}
+.family-grid figure,.photo-card,.activities-grid article{box-shadow:0 15px 38px #1b160d12}
+.family-grid img,.activities-grid img,.photo-card img{transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s}
+.family-grid figure:hover img,.activities-grid article:hover img,.photo-card:hover img{transform:scale(1.035);filter:saturate(1.05)}
+.family-grid figcaption{font-family:var(--haven-serif);font-size:25px;font-weight:500}
+.activities-section{background:radial-gradient(ellipse at 85% 10%,#393126 0%,#171612 48%,#090908 100%)}
+.activities-section .section-label{color:var(--haven-gold-light)}
+.activities-heading>p{color:#d1c8b8}
+.activities-grid{gap:14px}
+.activities-grid article{position:relative;isolation:isolate;min-height:390px}
+.activities-grid article:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(0deg,rgba(5,5,4,.88),transparent);z-index:0}
+.activities-grid article>div{z-index:1;padding:25px}
+.activities-grid article>div span{font-size:8px;letter-spacing:2px;color:#e2c997}
+.activities-grid article h3{font-family:var(--haven-serif);font-size:30px;font-weight:500}
+.gallery{background:#fffdf8}
+.photo-grid{gap:14px}
+.photo-card{border-radius:2px}
+.photo-card>div{padding:28px}
+.photo-card>div span{font-size:8px;letter-spacing:2px;color:#ead7ad}
+.photo-card h3{font-family:var(--haven-serif);font-size:34px;font-weight:500}
+.room-tour{position:relative;overflow:hidden}
+.room-tour:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 90% 0%,#4b3a2344,transparent 45%);pointer-events:none}
+.room-tour>div{position:relative}
+.room-tour h2{font-family:var(--haven-serif)!important;font-weight:400!important;letter-spacing:-1px}
+.room-tour video{box-shadow:0 30px 90px #0008}
+.options{background:#eee8dc}
+.options-head h2{font-size:clamp(48px,5.7vw,75px);line-height:1}
+.options-head>p{font-size:13px;line-height:2;color:#625c51}
+.option-cards{gap:15px}
+.option-cards article{position:relative;background:#fffdf8;border:1px solid #e1d6c3;border-top:2px solid #b99a62;box-shadow:0 14px 36px #221b100b;transition:transform .3s,box-shadow .3s}
+.option-cards article:hover{transform:translateY(-5px);box-shadow:0 22px 45px #221b1017}
+.option-number{font-size:8px;letter-spacing:2px;color:#92713c}
+.option-icon{font-size:27px;color:#b99a62}
+.option-cards h3{font-family:var(--haven-serif);font-size:32px;font-weight:500}
+.option-cards p{font-size:12px;line-height:1.9;color:#6c655a}
+.expectations-section{background:linear-gradient(135deg,#171612,#090908)!important}
+.expectations-heading h2{font-size:clamp(50px,6vw,82px)}
+.expectations-form{box-shadow:0 28px 90px #0008;border:1px solid #d8c8a7;border-top:3px solid #b99a62}
+.expectations-form legend{font-family:var(--haven-serif);font-size:29px;font-weight:500}
+.expectation-options label{min-height:48px;transition:background .2s,border-color .2s}
+.expectation-options label:hover{border-color:#b99a62;background:#f7f0e2}
+.community-hub{background:#f6f1e7}
+.community-heading h2{font-size:clamp(50px,6vw,78px)}
+.community-faq,.community-form{box-shadow:0 20px 55px #241b100c;border:1px solid #e4dac9}
+.community-faq summary{font-family:var(--haven-serif);font-size:22px;font-weight:500}
+.community-form button,.submit-button{min-height:50px;letter-spacing:1px;text-transform:uppercase;font-size:10px}
+.giving-section{background:#eee8dc}
+.giving-layout>div:first-child h2{font-size:clamp(49px,6vw,78px);line-height:.98}
+.giving-card{background:linear-gradient(145deg,#201e18,#0b0b09);box-shadow:0 25px 65px #1b160d24}
+.giving-card h3{font-family:var(--haven-serif);font-size:clamp(36px,4vw,52px)}
+.quote-band{background:linear-gradient(120deg,#11110f,#272319);border-top:1px solid #b99a6255;border-bottom:1px solid #b99a6255}
+.quote-band blockquote{font-family:var(--haven-serif);font-size:clamp(34px,5vw,61px);font-weight:400;line-height:1.12}
+.contact{background:#f6f1e7}
+.contact-card{box-shadow:0 25px 70px #20180d13}
+.contact-card>div{background:linear-gradient(145deg,#201e18,#090908)}
+.contact-card h2{font-family:var(--haven-serif);font-size:clamp(48px,5vw,68px);font-weight:400}
+.contact form{padding:clamp(26px,4vw,50px)}
+.contact input,.contact select,.contact textarea,.community-form input,.community-form select,.community-form textarea{min-height:48px;background:#fffefa;border-color:#ded4c2}
+.site-footer{border-top:1px solid #b99a6255;padding:50px 6%;background:#090908}
+.site-footer a{transition:color .2s}
+.site-footer a:hover{color:#e3c995}
+a,button{ -webkit-tap-highlight-color:transparent}
+@media(max-width:760px){
+ .announcement{font-size:7px;letter-spacing:1.4px;gap:7px;min-height:32px}
+ .site-header{height:72px}
+ .brand-logo{width:49px;height:49px}
+ .brand-name{font-size:18px}
+ .hero{background:#f1ebdf}
+ .hero-content{padding:55px 7% 35px}
+ .hero h1{font-size:clamp(58px,14vw,82px);letter-spacing:-1.5px}
+ .hero-image{height:285px;min-height:285px}
+ .hero-badge{bottom:310px;width:78px;height:78px}
+ .welcome-paths{box-shadow:none}
+ .welcome-paths>a b{font-size:23px}
+ .section{padding-top:76px;padding-bottom:76px}
+ .family-grid,.activities-grid{gap:10px}
+ .activities-grid article{min-height:250px}
+ .activities-grid article>div{padding:17px}
+ .activities-grid article h3{font-size:25px}
+ .room-tour{padding:70px 7%!important}
+ .room-tour video{aspect-ratio:16/9}
+ .expectations-form legend{font-size:24px}
+ .quote-band{padding:82px 7%}
+ .site-footer{padding:38px 7%}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .family-grid img,.activities-grid img,.photo-card img,.option-cards article{transition:none}
+ .family-grid figure:hover img,.activities-grid article:hover img,.photo-card:hover img,.option-cards article:hover{transform:none}
+}
