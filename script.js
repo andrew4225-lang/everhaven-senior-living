@@ -126,3 +126,14 @@ if(expectationsForm){
     }finally{button.disabled=false;button.innerHTML=original;}
   });
 }
+
+// Simple display preferences for readers who want larger type, stronger contrast, or less motion.
+(()=>{
+ const root=document.body;let enlarged=false;
+ const smaller=document.getElementById('textSmaller'),larger=document.getElementById('textLarger');
+ const contrast=document.getElementById('contrastToggle'),motion=document.getElementById('motionToggle');
+ if(smaller)smaller.addEventListener('click',()=>{root.classList.remove('large-text');enlarged=false;larger?.setAttribute('aria-pressed','false');smaller.setAttribute('aria-pressed','true');});
+ if(larger)larger.addEventListener('click',()=>{root.classList.add('large-text');enlarged=true;larger.setAttribute('aria-pressed','true');smaller?.setAttribute('aria-pressed','false');});
+ if(contrast)contrast.addEventListener('click',()=>{const on=root.classList.toggle('high-contrast');contrast.setAttribute('aria-pressed',String(on));});
+ if(motion)motion.addEventListener('click',()=>{const on=root.classList.toggle('reduce-motion');motion.setAttribute('aria-pressed',String(on));});
+})();
