@@ -475,3 +475,94 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .giving-card p{font-size:13px;line-height:1.95;color:#d0c9bd}
 .giving-note{margin:24px 0 0;color:#81796d;font-size:10px;line-height:1.8}
 @media(max-width:700px){.giving-layout{grid-template-columns:1fr;gap:24px}.giving-card{padding:26px 22px}}
+
+
+/* Final Everhaven luxury refresh — accessible, resident- and family-first */
+:root{
+ --navy:#111111;--navy-deep:#080808;--blue:#766b59;--copper:#b89455;
+ --sand:#e8dfcf;--cream:#f7f4ed;--paper:#fffdf8;--ink:#24211d;
+ --muted:#69645b;--line:#e4ded3;
+}
+body{background:var(--cream);color:var(--ink);font-size:16px}
+.announcement{background:#080808;color:#f4eee1;min-height:38px;font-size:9px;letter-spacing:2px}
+.announcement span{color:#d7bd86}
+.site-header{background:rgba(255,253,248,.97);height:92px;padding-inline:6%;border-bottom:1px solid #c8a96b55;backdrop-filter:blur(14px)}
+.brand-name{color:#111;letter-spacing:2.7px}
+.brand-name small{color:#8a7145}
+.brand-logo{width:57px;height:57px}
+nav{gap:clamp(12px,1.7vw,25px);font-size:12px}
+nav a{color:#29251d}
+nav a:hover{color:#9b7944}
+nav .nav-cta{border:1px solid #b89455;background:#111;color:#f8f2e7;padding:12px 16px}
+nav .nav-cta:hover{background:#b89455;color:#111}
+.hero{margin:0;min-height:min(760px,78vw);background:#090909}
+.hero-image{background-position:center 38%}
+.hero-shade{background:linear-gradient(90deg,rgba(5,5,5,.88),rgba(5,5,5,.63) 44%,rgba(5,5,5,.08)),linear-gradient(0deg,rgba(0,0,0,.58),transparent 58%)}
+.hero-content{padding-left:10%;max-width:900px}
+.hero h1{font-size:clamp(66px,8.4vw,116px);letter-spacing:-1.8px}
+.hero h1 em,h2 em{color:#d7bd86}
+.eyebrow{color:#e4d3b1}
+.hero-copy{font-size:16px;max-width:560px;color:#f1eee7;line-height:1.9}
+.button-gold{background:linear-gradient(135deg,#e2d0a7,#b89455);color:#111;box-shadow:0 8px 24px #00000024}
+.button-gold:hover{background:#f0dfb7;color:#080808;transform:translateY(-1px)}
+.text-link{font-size:12px}
+.hero-badge{border-color:#d7bd86;background:#10101099}
+.section{padding:clamp(78px,8.5vw,126px) max(7%,calc((100% - 1440px)/2))}
+.section-label{color:#92713c}
+.section-label span{color:#171717}
+h2{color:#171717}
+.intro{background:#fffdf8}
+.intro-copy{color:#5f5a51}
+.large-copy{color:#171717}
+.values-row{border-color:#d8c9aa}
+.values-row b{color:#171717}
+.lifestyle{background:#101010}
+.lifestyle-panel{background:linear-gradient(145deg,#151515,#090909)}
+.lifestyle-panel h2{color:#fff}
+.family-section,.gallery,.giving-section{background:#f7f4ed}
+.family-heading h2,.activities-heading h2,.gallery-heading h2{color:#171717}
+.family-grid figure,.photo-card,.activities-grid article{border-radius:3px;overflow:hidden}
+.activities-section{background:radial-gradient(ellipse at 78% 0%,#29251d 0%,#101010 48%,#080808 100%)}
+.activities-section h2,.expectations-section h2{color:#fff}
+.photo-card{box-shadow:0 16px 38px #17171718}
+.options{background:#fffdf8}
+.option-cards article{background:#fff;border-color:#e4ded3;border-top-color:#b89455}
+.option-cards h3{color:#171717}
+.development-section{background:#f1ede4}
+.roadmap article{background:#fffdf8;border-top-color:#b89455}
+.roadmap article>span{color:#92713c}
+.community-hub{background:#f4f0e8}
+.community-faq,.community-form{box-shadow:0 18px 48px #1717170c;border-color:#e2d7c4}
+.expectations-section{background:#101010}
+.expectations-form{border-top-color:#c8a96b}
+.giving-card{border-color:#b89455}
+.quote-band{background:#111;color:#f8f2e7}
+.quote-band blockquote{color:#fff}
+.contact{background:#f1ede4}
+.contact-card>div{background:#101010}
+.contact-card h2{color:#fff}
+.contact form{background:#fffdf8}
+input,select,textarea{border:1px solid #d8d0c2;border-radius:2px}
+input:focus,select:focus,textarea:focus{outline:2px solid #b89455;outline-offset:2px}
+.site-footer{background:#080808;color:#f8f2e7}
+.site-footer .brand-name{color:#fff}
+.site-footer .brand-name small{color:#d7bd86}
+.site-footer .back-top{color:#d7bd86}
+.skip-link{position:absolute;left:16px;top:-60px;z-index:1000;background:#fff;color:#111;padding:12px 18px;border:2px solid #b89455}
+.skip-link:focus{top:12px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b89455;outline-offset:3px}
+@media(max-width:1000px){nav{gap:11px;font-size:10px}.site-header{padding-inline:4%}}
+@media(max-width:700px){
+ .site-header{height:76px}
+ .hero{min-height:690px}
+ .hero-content{padding:64px 7% 112px}
+ .hero h1{font-size:clamp(58px,13vw,82px)}
+ .hero-badge{width:92px;height:92px;right:6%;bottom:90px;font-size:7px}
+ .hero-caption{font-size:7px;letter-spacing:1px}
+ nav{background:#fffdf8}
+ nav a{font-size:14px;padding:12px 4px}
+ nav .nav-cta{display:inline-block;text-align:center}
+ .section{padding:76px 7%}
+}
+@media(min-width:701px) and (max-width:1100px){.site-header{height:auto;min-height:86px;padding-block:12px}.brand-name{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.button-gold:hover{transform:none}}
