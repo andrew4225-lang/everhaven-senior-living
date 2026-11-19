@@ -258,3 +258,31 @@ input:focus,select:focus,textarea:focus{outline:2px solid #c8a96b;border-color:#
  .contact-card>div{border-radius:7px 7px 0 0}
  .contact form{border-radius:0 0 7px 7px}
 }
+
+
+/* Family-first five-star-inspired presentation */
+.hero{min-height:690px}
+.hero-image{background-image:url("https://cdn.autumna.co.uk/autumna/prod/media/filer_public/dd/d1/ddd1a53c-e831-4dcf-8b21-b971d09532a8/retirement-living-family-visit.jpg");background-position:center 42%;background-size:cover}
+.hero-shade{background:linear-gradient(90deg,rgba(5,5,5,.91),rgba(8,8,8,.72) 43%,rgba(8,8,8,.12)),linear-gradient(0deg,rgba(0,0,0,.56),transparent 56%)}
+.hero-content{max-width:780px}
+.hero h1{font-size:clamp(58px,7vw,92px)}
+.hero-badge{border-color:#c8a96b;background:rgba(9,9,9,.72)}
+.family-section{background:#f5f2ec;padding-top:95px;padding-bottom:95px}
+.family-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:8%;align-items:end;margin-bottom:38px}
+.family-heading>p{color:#746f67;font-size:13px;line-height:2;margin:0}
+.family-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.family-grid figure{margin:0;position:relative;overflow:hidden;background:#171717;min-height:300px;box-shadow:0 16px 38px #00000012}
+.family-grid img{width:100%;height:330px;display:block;object-fit:cover;transition:transform .5s}
+.family-grid figure:hover img{transform:scale(1.04)}
+.family-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:42px 22px 20px;color:#fff;font:24px/1.1 var(--serif);background:linear-gradient(0deg,rgba(0,0,0,.82),transparent)}
+.family-note,.photo-note{font-size:10px;color:#827b70;margin-top:18px}
+.gallery{background:#e9e4da}
+.lifestyle-photo{background-image:url("https://www.edgewoodhealthcare.com/wp-content/uploads/2025/04/Staying-Connected-with-Family-Blog-Image.jpg");background-position:center;background-size:cover}
+@media(max-width:700px){
+ .hero{min-height:630px}
+ .hero-image{background-position:58% center}
+ .family-heading{display:block}
+ .family-heading>p{margin-top:18px}
+ .family-grid{grid-template-columns:1fr}
+ .family-grid img{height:280px}
+}
