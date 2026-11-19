@@ -209,7 +209,7 @@ if(expectationsForm){
   const email=$('portalEmail').value.trim();if(!email){status('portalAuthStatus','Enter your email address first, then tap Forgot password again.');return;}
   status('portalAuthStatus','Requesting a password reset…');
   try{const r=await fetch(endpoint+'/auth/v1/recover',{method:'POST',headers:headers(anon),body:JSON.stringify({email,redirect_to:location.origin+'/reset-password.html'})});if(!r.ok)throw new Error(await r.text());status('portalAuthStatus','If that account exists, a password reset email will arrive. Check your inbox.');}
-  catch(e){status('portalAuthStatus,'+e.message);}
+  catch(e){status('portalAuthStatus',e.message);}
  });
  $('portalSignOut').addEventListener('click',async()=>{if(session)await fetch(endpoint+'/auth/v1/logout',{method:'POST',headers:headers(session.access_token)}).catch(()=>{});clearSession();});
  $('portalMessageForm').addEventListener('submit',async e=>{
