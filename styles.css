@@ -464,3 +464,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .expectations-status{font-size:12px;color:#766b59;line-height:1.7;margin:14px 0}
 .expectations-disclaimer{font-size:10px;line-height:1.8;color:#898174;border-top:1px solid #e8e1d6;padding-top:15px;margin:8px 0 0}
 @media(max-width:700px){.expectations-heading{grid-template-columns:1fr;gap:18px}.expectations-form{padding:22px 17px}.expectation-options{grid-template-columns:1fr}.expectations-form fieldset{padding:20px 0}.expectations-form legend{font-size:23px}}
+
+/* Resident-directed charitable giving */
+.giving-section{background:#f7f4ed}
+.giving-layout{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center;margin-top:1.5rem}
+.giving-lead{max-width:560px;color:#746f67;font-size:14px;line-height:2;margin-top:24px}
+.giving-card{padding:clamp(28px,4vw,48px);background:#171717;color:#f8f4eb;border:1px solid #c8a96b;box-shadow:0 20px 55px #00000012}
+.giving-kicker{font-size:9px;letter-spacing:2px;color:#d7bd86;font-weight:700}
+.giving-card h3{font:clamp(29px,3vw,39px)/1.1 var(--serif);font-weight:500;color:#fff;margin:18px 0}
+.giving-card p{font-size:13px;line-height:1.95;color:#d0c9bd}
+.giving-note{margin:24px 0 0;color:#81796d;font-size:10px;line-height:1.8}
+@media(max-width:700px){.giving-layout{grid-template-columns:1fr;gap:24px}.giving-card{padding:26px 22px}}
