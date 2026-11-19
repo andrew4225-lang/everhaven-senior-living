@@ -934,3 +934,12 @@ body.reduce-motion *,body.reduce-motion *:before,body.reduce-motion *:after{scro
 .leadership-copy>p:not(.leadership-kicker){max-width:650px;color:#d6cfc2;font-size:13px;line-height:2}
 .leadership-copy .leadership-note{font-size:10px!important;color:#a9a092!important;margin-top:22px}
 @media(max-width:650px){.leadership-card{grid-template-columns:1fr}.leadership-monogram{max-width:150px}}
+
+
+.leadership-copy .leadership-bio-intro{font-size:15px!important;color:#f4ead7!important}
+.leadership-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:24px 0}
+.leadership-values>div{padding:14px 16px;border-left:2px solid #b99a62;background:#ffffff0a}
+.leadership-values b{display:block;color:#e0c48c;font:500 22px 'Cormorant Garamond',serif;margin-bottom:4px}
+.leadership-values span{display:block;color:#d6cfc2;font-size:11px;line-height:1.7}
+.leadership-copy .leadership-belief{margin:25px 0;padding:18px 22px;border-left:2px solid #d8bd85;background:#ffffff0a;color:#e5d2aa!important;font:italic 24px/1.35 'Cormorant Garamond',serif}
+@media(max-width:650px){.leadership-values{grid-template-columns:1fr}}
