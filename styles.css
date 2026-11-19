@@ -438,3 +438,29 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .community-status{font-size:.82rem;color:#766b59;line-height:1.6;margin:.3rem 0}
 .community-disclaimer{font-size:.72rem;color:#898174;line-height:1.65;border-top:1px solid #e8e1d6;padding-top:1rem;margin:.3rem 0 0}
 @media(max-width:760px){.community-heading,.community-grid{grid-template-columns:1fr;gap:1.4rem}.community-heading{margin-bottom:2rem}.community-form,.community-faq{padding:1.25rem}}
+
+/* Senior living expectations survey */
+.expectations-section{background:#101010;color:#f8f4eb}
+.expectations-section .section-label,.expectations-section .section-label span{color:#d7bd86}
+.expectations-section .section-label span{border-color:#c8a96b}
+.expectations-heading{display:grid;grid-template-columns:1fr .9fr;gap:8%;align-items:end;margin:1.5rem 0 3rem}
+.expectations-heading h2{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:500;line-height:1.02;margin:0;color:#fff}
+.expectations-heading h2 em{color:#d7bd86}
+.expectations-heading>p{color:#c9c1b3;line-height:1.9;margin:0;font-size:13px}
+.expectations-form{max-width:1120px;margin:auto;padding:clamp(22px,4vw,48px);background:#fffefa;color:#242321;border-top:4px solid #c8a96b;box-shadow:0 24px 70px #0007}
+.expectations-topline{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid #e7e0d5;color:#9b7944;font-size:9px;font-weight:700;letter-spacing:1.7px}
+.expectations-form fieldset{border:0;border-bottom:1px solid #e8e1d6;padding:25px 0;margin:0;min-width:0}
+.expectations-form legend{font:26px/1.2 var(--serif);font-weight:600;color:#171717;padding:0 0 15px;max-width:100%}
+.expectation-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.expectation-options label{display:flex;align-items:center;gap:11px;padding:12px 14px;border:1px solid #e6dfd3;background:#faf8f3;cursor:pointer;font-size:12px;line-height:1.5;transition:border-color .2s,background .2s}
+.expectation-options label:has(input:checked){border-color:#c8a96b;background:#f4eee1}
+.expectation-options input{width:17px;height:17px;min-width:17px;margin:0;accent-color:#a78349}
+.expectation-options label span{flex:1}
+.expectations-extra{display:grid;gap:8px;padding:25px 0}
+.expectations-extra label{font-size:12px;font-weight:600;color:#34302a;margin-top:10px}
+.expectations-extra label span{font-weight:400;color:#8a8378}
+.expectations-extra input,.expectations-extra textarea{width:100%;border:1px solid #ddd5c8;background:#fff;padding:13px 14px;color:#28241f;font:inherit;font-size:13px;margin:0}
+.expectations-form .submit-button{margin-top:8px}
+.expectations-status{font-size:12px;color:#766b59;line-height:1.7;margin:14px 0}
+.expectations-disclaimer{font-size:10px;line-height:1.8;color:#898174;border-top:1px solid #e8e1d6;padding-top:15px;margin:8px 0 0}
+@media(max-width:700px){.expectations-heading{grid-template-columns:1fr;gap:18px}.expectations-form{padding:22px 17px}.expectation-options{grid-template-columns:1fr}.expectations-form fieldset{padding:20px 0}.expectations-form legend{font-size:23px}}
