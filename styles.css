@@ -566,3 +566,160 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 @media(min-width:701px) and (max-width:1100px){.site-header{height:auto;min-height:86px;padding-block:12px}.brand-name{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.button-gold:hover{transform:none}}
+
+
+/* Structural redesign: editorial resort-style layout, not just a palette change */
+body{background:#f5f1e8;color:#211f1a}
+.announcement{min-height:40px;font-size:9px;letter-spacing:2.4px}
+.site-header{height:86px;padding:0 5.5%;display:flex;gap:28px}
+.brand-logo{width:60px;height:60px}
+nav{gap:clamp(10px,1.4vw,21px);font-size:11px}
+nav a{white-space:nowrap}
+.hero{
+ display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch;
+ min-height:650px;margin:0;padding:0;background:#f4efe5;color:#191813;
+ overflow:hidden;position:relative
+}
+.hero-image{
+ position:absolute;left:51%;right:0;top:0;bottom:0;width:49%;height:100%;
+ background-image:url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=2200&q=85");
+ background-position:center;background-size:cover;transform:none
+}
+.hero-shade{
+ display:block;left:44%;right:0;top:0;bottom:0;
+ background:linear-gradient(90deg,#f4efe5 0%,rgba(244,239,229,.78) 9%,rgba(244,239,229,0) 34%);
+ pointer-events:none
+}
+.hero-content{
+ grid-column:1;grid-row:1;z-index:2;align-self:center;
+ max-width:760px;padding:88px 7% 105px 11%;color:#191813
+}
+.hero .eyebrow{color:#8a6a37;font-size:10px;letter-spacing:2.4px}
+.hero h1{font-size:clamp(62px,7vw,98px);line-height:.93;color:#171612;max-width:680px}
+.hero h1 em{color:#9b7944}
+.hero-copy{font-size:15px;line-height:1.95;color:#595449;max-width:490px}
+.hero .text-link{color:#211f1a}
+.hero .hero-caption{left:5.5%;right:5.5%;bottom:22px;color:#5e574b;z-index:3}
+.hero .hero-caption span:first-child{color:#8c6b37}
+.hero-badge{right:5%;bottom:7%;width:116px;height:116px;background:#171612d9;border:1px solid #d7bd86}
+.button-gold{background:#b89455;color:#111}
+.welcome-paths{
+ position:relative;z-index:4;display:grid;grid-template-columns:1.1fr repeat(3,1fr);
+ gap:0;background:#fffdf8;border-bottom:1px solid #e5ddce;
+ padding:0 5.5%;box-shadow:0 18px 40px #3027190b
+}
+.welcome-paths-heading{padding:30px 26px 28px 0;display:flex;flex-direction:column;justify-content:center}
+.welcome-paths-heading span{font-size:9px;letter-spacing:2px;color:#96743e;font-weight:700}
+.welcome-paths-heading p{font:25px/1.15 var(--serif);margin:8px 0 0;color:#201d17}
+.welcome-paths>a{
+ min-height:118px;padding:24px 22px;display:flex;flex-direction:column;justify-content:center;
+ border-left:1px solid #e8e0d2;transition:background .2s
+}
+.welcome-paths>a:hover{background:#f5f0e6}
+.welcome-paths .path-icon{font-size:20px;color:#a78349;margin-bottom:5px}
+.welcome-paths>a b{font:22px/1.15 var(--serif);color:#201d17}
+.welcome-paths>a small{font-size:10px;color:#756d60;margin-top:7px}
+.welcome-paths>a i{font-style:normal;color:#9b7944;margin-left:5px}
+.intro{background:#fffdf8}
+.intro-grid{grid-template-columns:1.1fr .9fr;gap:12%;align-items:center}
+.intro-grid h2{font-size:clamp(48px,5.4vw,75px)}
+.values-row>div{padding:20px 18px 4px 0;border-right:1px solid #e5ddce}
+.values-row>div:last-child{border-right:0}
+.lifestyle{grid-template-columns:1.08fr .92fr;min-height:650px}
+.lifestyle-photo{min-height:650px}
+.lifestyle-panel{padding:80px 11%}
+.family-section{background:#f5f1e8}
+.family-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:10%;align-items:end;margin-bottom:42px}
+.family-grid{grid-template-columns:1.2fr .9fr .9fr;align-items:stretch}
+.family-grid figure:first-child{grid-row:span 2}
+.family-grid figure:first-child img{height:100%;min-height:550px}
+.family-grid figure:not(:first-child) img{height:250px}
+.family-grid figcaption{font-size:24px}
+.activities-section{padding-top:100px;padding-bottom:100px}
+.activities-heading{display:grid;grid-template-columns:1fr .8fr;gap:12%;align-items:end;margin-bottom:42px}
+.activities-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+.activities-grid article{grid-column:span 2;min-height:360px}
+.activities-grid article:nth-child(4),.activities-grid article:nth-child(5){grid-column:span 3}
+.activities-grid img{height:100%;min-height:360px}
+.gallery{background:#fffdf8}
+.gallery-heading{align-items:end}
+.photo-grid{grid-template-columns:1.3fr .85fr .85fr}
+.photo-card{min-height:470px}
+.photo-card:first-child{min-height:530px}
+.room-tour{background:#101010!important}
+.room-tour>div{max-width:1320px!important}
+.room-tour video{border-radius:0!important}
+.options{background:#eae4d8}
+.options-head{display:grid;grid-template-columns:1fr .75fr;align-items:end}
+.option-cards{grid-template-columns:repeat(3,1fr)}
+.option-cards article{min-height:320px;padding:34px}
+.expectations-section{background:#111!important}
+.expectations-heading{grid-template-columns:1.1fr .9fr}
+.expectations-form{max-width:1280px}
+.community-hub{background:#f5f1e8}
+.community-heading{grid-template-columns:1.1fr .9fr}
+.community-grid{grid-template-columns:.9fr 1.1fr}
+.community-faq,.community-form{background:#fffdf8}
+.development-section{background:#fffdf8}
+.roadmap{gap:10px}
+.roadmap article{min-height:250px;padding:24px 17px}
+.giving-section{background:#eae4d8}
+.giving-layout{grid-template-columns:.9fr 1.1fr;gap:10%}
+.giving-card{padding:clamp(32px,5vw,62px)}
+.quote-band{padding:120px 10%;text-align:center}
+.quote-band blockquote{max-width:900px;margin:15px auto}
+.contact{background:#f5f1e8}
+.contact-card{grid-template-columns:1fr 1fr}
+.site-footer{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:15px}
+.site-footer>p{text-align:right}
+.site-footer .back-top{justify-self:start}
+.site-footer .copyright{justify-self:end}
+@media(max-width:1100px){
+ .site-header{padding-inline:3%}
+ nav{gap:9px;font-size:9px}
+ .welcome-paths{padding-inline:3%}
+ .welcome-paths>a{padding-inline:14px}
+ .welcome-paths>a b{font-size:19px}
+}
+@media(max-width:760px){
+ .site-header{height:76px;padding-inline:5%}
+ .hero{display:flex;flex-direction:column;min-height:0;padding:0}
+ .hero-image{position:relative;inset:auto;order:2;width:100%;height:300px;min-height:300px;background-position:center 38%}
+ .hero-shade{display:none}
+ .hero-content{order:1;padding:62px 7% 38px;max-width:none}
+ .hero h1{font-size:clamp(58px,13vw,80px)}
+ .hero-copy{font-size:14px}
+ .hero-badge{right:7%;bottom:325px;width:84px;height:84px;font-size:7px}
+ .hero-caption{position:relative!important;order:3;left:auto!important;right:auto!important;bottom:auto!important;background:#f4efe5;padding:13px 7%;color:#5e574b;display:flex;flex-wrap:wrap;font-size:7px}
+ .welcome-paths{grid-template-columns:1fr;padding:12px 7%}
+ .welcome-paths-heading{padding:16px 0}
+ .welcome-paths>a{min-height:0;padding:17px 0;border-left:0;border-top:1px solid #e8e0d2}
+ .welcome-paths>a b{font-size:22px}
+ .family-heading,.activities-heading,.gallery-heading,.options-head{display:grid;grid-template-columns:1fr;gap:18px}
+ .family-grid{grid-template-columns:1fr 1fr}
+ .family-grid figure:first-child{grid-row:auto;grid-column:1/-1}
+ .family-grid figure:first-child img{height:300px;min-height:0}
+ .family-grid figure:not(:first-child) img{height:210px}
+ .activities-grid{grid-template-columns:1fr 1fr}
+ .activities-grid article,.activities-grid article:nth-child(4),.activities-grid article:nth-child(5){grid-column:span 1;min-height:260px}
+ .activities-grid article:last-child{grid-column:1/-1}
+ .activities-grid img{height:260px;min-height:260px}
+ .photo-grid{grid-template-columns:1fr}
+ .photo-card,.photo-card:first-child{min-height:320px}
+ .community-heading,.community-grid,.expectations-heading,.giving-layout{grid-template-columns:1fr;gap:24px}
+ .roadmap{grid-template-columns:1fr 1fr}
+ .roadmap article:last-child{grid-column:1/-1}
+ .contact-card{grid-template-columns:1fr}
+ .site-footer{display:flex;flex-direction:column;align-items:flex-start}
+ .site-footer>p{text-align:left}
+}
+@media(max-width:440px){
+ .family-grid{grid-template-columns:1fr}
+ .family-grid figure:first-child{grid-column:auto}
+ .family-grid figure:not(:first-child) img{height:260px}
+ .activities-grid{grid-template-columns:1fr}
+ .activities-grid article,.activities-grid article:nth-child(4),.activities-grid article:nth-child(5),.activities-grid article:last-child{grid-column:auto}
+ .roadmap{grid-template-columns:1fr}
+ .roadmap article:last-child{grid-column:auto}
+ .hero .hero-caption span:last-child{display:none}
+}
