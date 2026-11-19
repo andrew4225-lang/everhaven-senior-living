@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#183247"><title>Everhaven | Private Lead Dashboard</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{--navy:#183247;--deep:#102635;--copper:#b97852;--cream:#f6f3ed;--paper:#fffdf9;--ink:#243642;--muted:#687780;--line:#dedbd3}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:14px 'DM Sans',sans-serif}.top{background:var(--deep);color:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center}.brand{font:600 26px 'Cormorant Garamond',serif;letter-spacing:1px}.brand small{display:block;font:9px 'DM Sans',sans-serif;letter-spacing:3px;color:#e0b99f}.wrap{max-width:1120px;margin:42px auto;padding:0 20px}h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500}h1{font-size:46px;margin:0 0 6px;color:var(--navy)}.muted{color:var(--muted)}.panel{background:var(--paper);border:1px solid var(--line);padding:26px;margin:24px 0}.login{max-width:460px;margin:55px auto}.field{display:block;width:100%;padding:13px;margin:7px 0 16px;border:1px solid var(--line);background:#fff;font:14px 'DM Sans',sans-serif}button{border:0;background:var(--copper);color:white;padding:13px 19px;font-weight:700;cursor:pointer}button:disabled{opacity:.6}.hidden{display:none!important}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{background:#f0eee8;padding:18px}.stat strong{display:block;font:36px 'Cormorant Garamond',serif;color:var(--navy)}.lead{border-top:1px solid var(--line);padding:18px 0;display:grid;grid-template-columns:1fr auto;gap:16px}.lead h3{font-size:15px;margin:0 0 5px}.lead p{margin:4px 0;color:var(--muted);font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}.lead select{padding:9px;border:1px solid var(--line);background:white}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tabs button{background:#e7e6e0;color:var(--navy)}.tabs button.active{background:var(--navy);color:white}.notice{padding:12px;background:#f0eee8;border-left:3px solid var(--copper);margin:14px 0}.danger{color:#9d3e2e}@media(max-width:650px){.stats{grid-template-columns:1fr}.lead{grid-template-columns:1fr}.top{padding:18px 5%}.wrap{margin:28px auto}h1{font-size:38px}}
-</style></head><body><header class="top"><div class="brand">EVERHAVEN<small>PRIVATE DEVELOPMENT DASHBOARD</small></div><button id="logout" class="hidden">Sign out</button></header><main class="wrap"><section id="login" class="panel login"><h1>Owner sign in</h1><p class="muted">Private access for the Everhaven project owner.</p><form id="loginForm"><label>Email address<input class="field" id="email" type="email" autocomplete="username" required value="andrew4225@gmail.com"></label><label>Password<input class="field" id="password" type="password" autocomplete="current-password" required></label><button id="loginButton">Sign in securely</button></form><button id="forgotPassword" type="button" style="margin-top:12px;background:var(--navy);width:100%">Forgot password?</button><p id="loginMessage" class="notice" aria-live="polite">Use the password for your existing Supabase account. No password is stored on this website.</p></section><section id="dashboard" class="hidden"><h1>Inquiry overview</h1><p class="muted">New inquiries from the Everhaven website. Keep all contact and property information confidential.</p><div class="stats"><div class="stat">Future community inquiries<strong id="countFamily">—</strong></div><div class="stat">Investor / partner leads<strong id="countInvestor">—</strong></div><div class="stat">Land / property leads<strong id="countProperty">—</strong></div></div><div class="tabs"><button class="active" data-table="everhaven_inquiries">Community interest</button><button data-table="everhaven_investor_leads">Investors & partners</button><button data-table="everhaven_property_leads">Land & property</button></div><div class="panel"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center"><h2 id="listTitle">Community interest</h2><button id="refresh">Refresh</button></div><p id="loadMessage" class="muted" aria-live="polite"></p><div id="leads"></div></div></section></main>
+</style></head><body><header class="top"><div class="brand">EVERHAVEN<small>PRIVATE DEVELOPMENT DASHBOARD</small></div><button id="logout" class="hidden">Sign out</button></header><main class="wrap"><section id="login" class="panel login"><h1>Owner sign in</h1><p class="muted">Private access for the Everhaven project owner.</p><form id="loginForm"><label>Email address<input class="field" id="email" type="email" autocomplete="username" required value="andrew4225@gmail.com"></label><label>Password<input class="field" id="password" type="password" autocomplete="current-password" required></label><button id="loginButton">Sign in securely</button></form><button id="forgotPassword" type="button" style="margin-top:12px;background:var(--navy);width:100%">Forgot password?</button><p id="loginMessage" class="notice" aria-live="polite">Use the password for your existing Supabase account. No password is stored on this website.</p></section><section id="dashboard" class="hidden"><h1>Inquiry overview</h1><p class="muted">New inquiries from the Everhaven website. Keep all contact and property information confidential.</p><div class="stats"><div class="stat">Future community inquiries<strong id="countFamily">—</strong></div><div class="stat">Investor / partner leads<strong id="countInvestor">—</strong></div><div class="stat">Land / property leads<strong id="countProperty">—</strong></div></div><div class="tabs"><button class="active" data-table="everhaven_inquiries">Community interest</button><button data-table="everhaven_investor_leads">Investors & partners</button><button data-table="everhaven_property_leads">Land & property</button></div><div class="panel"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center"><h2 id="listTitle">Community interest</h2><button id="refresh">Refresh</button></div><p id="loadMessage" class="muted" aria-live="polite"></p><div id="leads"></div></div>
+<div class="panel" id="familyInbox"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center"><h2>Family portal inbox</h2><button id="refreshMessages">Refresh messages</button></div><p id="messageStatus" class="muted" aria-live="polite">Private messages from family members and future residents appear here.</p><div id="portalThreads"></div><form id="portalReplyForm" class="hidden" style="border-top:1px solid var(--line);padding-top:20px;margin-top:20px"><h3 id="replyHeading">Reply privately</h3><input id="replyTo" type="hidden"><label>Subject<input id="replySubject" class="field" maxlength="160" required></label><label>Reply<textarea id="replyBody" class="field" rows="4" maxlength="5000" required></textarea></label><button id="sendReply">Send private reply</button><button id="cancelReply" type="button" style="background:var(--navy);margin-left:8px">Cancel</button></form></div></section></main>
 <script type="module">
 import {createClient} from 'https://esm.sh/@supabase/supabase-js@2';
 const supabase=createClient('https://rpzmjiiomgjttjjrkkqf.supabase.co','sb_publishable_Lwcv2EAfLV4gAn51_JtlVA_iEEimZIi');
@@ -15,7 +16,7 @@ async function showSession(){
  const {data:{session}}=await supabase.auth.getSession();
  if(session){
   if(session.user.id!==OWNER){await supabase.auth.signOut();loginMessage.textContent='This account is not authorized for the Everhaven owner dashboard.';return}
-  login.classList.add('hidden');dashboard.classList.remove('hidden');logout.classList.remove('hidden');await refreshCounts();await loadLeads();
+  login.classList.add('hidden');dashboard.classList.remove('hidden');logout.classList.remove('hidden');await refreshCounts();await loadLeads();await loadPortalMessages();
  }
 }
 document.getElementById('loginForm').addEventListener('submit',async e=>{
@@ -34,6 +35,46 @@ document.getElementById('forgotPassword').addEventListener('click',async()=>{
  button.disabled=false;
  loginMessage.textContent=error?'Could not send reset email: '+error.message:'If this email belongs to an account, a password reset link has been sent. Check your inbox and spam folder.';
 });
+async function loadPortalMessages(){
+ const status=document.getElementById('messageStatus'),box=document.getElementById('portalThreads');
+ status.textContent='Loading private messages…';box.replaceChildren();
+ const {data,error}=await supabase.from('everhaven_portal_messages').select('id,from_user_id,to_user_id,subject,body,created_at').or('from_user_id.eq.'+OWNER+',to_user_id.eq.'+OWNER).order('created_at',{ascending:false}).limit(100);
+ if(error){status.textContent='Could not load portal messages. Check the owner session and message permissions.';return}
+ if(!data.length){status.textContent='No family portal messages have arrived yet.';return}
+ status.textContent=data.length+' private message(s). Only the account holder and Everhaven owner can view each conversation.';
+ for(const row of data){
+  const isIncoming=row.to_user_id===OWNER;
+  const item=document.createElement('article');item.className='lead';
+  const main=document.createElement('div');
+  const heading=document.createElement('h3');heading.textContent=row.subject||'Message';
+  const meta=document.createElement('p');meta.textContent=(isIncoming?'From family / resident account':'Sent by Everhaven')+' · '+new Date(row.created_at).toLocaleString();
+  const body=document.createElement('p');body.textContent=row.body;
+  main.append(heading,meta,body);
+  const action=document.createElement('div');
+  if(isIncoming){
+   const btn=document.createElement('button');btn.textContent='Reply privately';
+   btn.addEventListener('click',()=>openReply(row));action.append(btn);
+  }
+  item.append(main,action);box.append(item);
+ }
+}
+function openReply(row){
+ const form=document.getElementById('portalReplyForm');
+ document.getElementById('replyTo').value=row.from_user_id;
+ document.getElementById('replySubject').value=(row.subject||'Message').startsWith('Re: ')?row.subject:'Re: '+(row.subject||'Message');
+ document.getElementById('replyBody').value='';
+ document.getElementById('replyHeading').textContent='Reply privately to '+row.from_user_id;
+ form.classList.remove('hidden');form.scrollIntoView({behavior:'smooth',block:'center'});
+}
+document.getElementById('portalReplyForm').addEventListener('submit',async e=>{
+ e.preventDefault();const button=document.getElementById('sendReply');button.disabled=true;
+ const {error}=await supabase.from('everhaven_portal_messages').insert({from_user_id:OWNER,to_user_id:document.getElementById('replyTo').value,subject:document.getElementById('replySubject').value.trim(),body:document.getElementById('replyBody').value.trim()});
+ button.disabled=false;
+ if(error){document.getElementById('messageStatus').textContent='Reply failed: '+error.message;return}
+ document.getElementById('portalReplyForm').classList.add('hidden');document.getElementById('messageStatus').textContent='Private reply sent.';await loadPortalMessages();
+});
+document.getElementById('cancelReply').addEventListener('click',()=>document.getElementById('portalReplyForm').classList.add('hidden'));
+document.getElementById('refreshMessages').addEventListener('click',loadPortalMessages);
 async function refreshCounts(){
  const pairs=[['everhaven_inquiries','countFamily'],['everhaven_investor_leads','countInvestor'],['everhaven_property_leads','countProperty']];
  for(const [table,id] of pairs){const {count,error}=await supabase.from(table).select('*',{count:'exact',head:true});document.getElementById(id).textContent=error?'—':count}
@@ -55,7 +96,7 @@ async function loadLeads(){
  }
 }
 document.querySelectorAll('[data-table]').forEach(btn=>btn.addEventListener('click',async()=>{document.querySelectorAll('[data-table]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeTable=btn.dataset.table;document.getElementById('listTitle').textContent=titles[activeTable];await loadLeads()}));
-document.getElementById('refresh').addEventListener('click',async()=>{await refreshCounts();await loadLeads()});
+document.getElementById('refresh').addEventListener('click',async()=>{await refreshCounts();await loadLeads();await loadPortalMessages()});
 supabase.auth.onAuthStateChange(()=>{});
 await showSession();
 </script></body></html>
