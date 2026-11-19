@@ -105,3 +105,34 @@ if(form){
     }
   });
 }
+
+const communityForm=document.getElementById('communityForm');
+if(communityForm){
+  communityForm.addEventListener('submit',async event=>{
+    event.preventDefault();
+    if(!communityForm.reportValidity())return;
+    const button=communityForm.querySelector('button[type="submit"]');
+    const status=document.getElementById('communityStatus');
+    const original=button.innerHTML;
+    const get=id=>(document.getElementById(id)?.value||'').trim();
+    button.disabled=true;
+    button.textContent='Sending…';
+    status.textContent='Sending your message securely. Please wait.';
+    try{
+      const kind=get('communityType');
+      const topic=get('communityTopic');
+      const body='['+kind+' | '+topic+'] '+get('communityMessage');
+      const response=await fetch('https://rpzmjiiomgjttjjrkkqf.supabase.co/rest/v1/everhaven_inquiries',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','apikey':'sb_publishable_Lwcv2EAfLV4gAn51_JtlVA_iEEimZIi','Authorization':'Bearer sb_publishable_Lwcv2EAfLV4gAn51_JtlVA_iEEimZIi','Prefer':'return=minimal'},
+        body:JSON.stringify({inquiry_type:'general',full_name:get('communityName')||'Community visitor',email:get('communityEmail')||'no-reply@everhaven.invalid',phone:'',message:body})
+      });
+      if(!response.ok)throw new Error(await response.text());
+      status.textContent='Thank you for sharing your voice. Your message has been submitted to Everhaven for review.';
+      communityForm.reset();
+    }catch(error){
+      console.error('Everhaven community message failed:',error);
+      status.textContent='We could not send your message right now. Please try again later.';
+    }finally{button.disabled=false;button.innerHTML=original;}
+  });
+}
